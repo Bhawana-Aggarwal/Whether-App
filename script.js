@@ -9,7 +9,7 @@ document.getElementById('weatherForm').addEventListener('submit', async function
     }
 
     const apiKey = '6debc839280a4a5097a125437252001';
-    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
+    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
 
     try {
         const response = await fetch(apiUrl);
@@ -37,3 +37,4 @@ function displayWeather(data) {
       <p><strong>Air Quality Index (AQI):</strong> ${current.air_quality['pm2_5'].toFixed(2)}</p>
     `;
 }
+
